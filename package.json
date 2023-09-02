@@ -1,6 +1,6 @@
 {
   "name": "@networkninja/smooth-dnd",
-  "version": "0.13.4",
+  "version": "0.13.5",
   "description": "Drag and Drop library",
   "main": "./dist/index.js",
   "scripts": {
