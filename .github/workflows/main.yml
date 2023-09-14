@@ -15,7 +15,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@networkninja'
-          run: |
+      - run: |
           npm install
           npm run build
           npm publish
