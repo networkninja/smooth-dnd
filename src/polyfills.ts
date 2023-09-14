@@ -28,6 +28,7 @@ function applyPolyfills() {
     ) {
       Object.defineProperty(constructor.prototype, "firstElementChild", {
         get: function () {
+          console.log('hitting this!');
           if(this !== constructor.prototype) {
             var node, nodes = this.childNodes, i = 0;
             while ((node = nodes[i++])) {
