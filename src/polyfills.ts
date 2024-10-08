@@ -17,32 +17,6 @@ function applyPolyfills() {
     }
   })(Element);
 
-  // Overwrites native 'firstElementChild' prototype.
-  // Adds Document & DocumentFragment support for IE9 & Safari.
-  // Returns array instead of HTMLCollection.
-  (function (constructor: any) {
-    if (
-      constructor &&
-      constructor.prototype &&
-      !constructor.prototype.hasOwnProperty('firstElementChild')
-    ) {
-      Object.defineProperty(constructor.prototype, "firstElementChild", {
-        get: function () {
-          console.log('hitting this!');
-          if(this !== constructor.prototype) {
-            var node, nodes = this.childNodes, i = 0;
-            while ((node = nodes[i++])) {
-              if (node.nodeType === 1) {
-                return node;
-              }
-            }
-          }
-          return null;
-        }
-      });
-    }
-  })(Node || Element);
-
   // Production steps of ECMA-262, Edition 5, 15.4.4.17
   // Reference: http://es5.github.io/#x15.4.4.17
   if (!Array.prototype.some) {
