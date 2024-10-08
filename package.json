@@ -1,6 +1,6 @@
 {
   "name": "@networkninja/smooth-dnd",
-  "version": "0.13.7",
+  "version": "0.13.8",
   "description": "Drag and Drop library",
   "main": "./dist/index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "@babel/preset-typescript": "7.3.3",
     "rollup": "1.4.0",
     "rollup-plugin-babel": "4.3.2",
-    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-uglify": "6.0.2",
     "typescript": "3.3.3333"
   },
